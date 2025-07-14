@@ -8,7 +8,11 @@ output:
 links-to-footnotes: false
 paged-footnotes: false
 params:
+  repo_url: 'https://github.com/NewGraphEnvironment/fish_passage_peace_2025_permit'
+  report_url: 'https://www.newgraphenvironment.com/fish_passage_peace_2025_permit/'
+  gis_project_name: "sern_peace_fwcp_2023"
   update_packages: FALSE
+  
 
 # uncomment this line to produce HTML and PDF in RStudio:
 knit: pagedown::chrome_print
@@ -56,15 +60,16 @@ options(knitr.kable.NAN = '--')
 source('scripts/packages.R')
 source('scripts/staticimports.R')
 
-name_project <- 'fraser_2024'
-name_repo <- 'fish_passage_fraser_2024_permit'
+# use the repo_url to extract the project region and permit year
+project_region <- stringr::str_extract(params$repo_url, "(?<=fish_passage_)[^_]+")
+permit_year <- stringr::str_match(params$repo_url, "fish_passage_[^_]+_([0-9]{4})")[,2]
 
-link_repo <- paste0('https://newgraphenvironment.github.io/', name_repo, '/')
-link_kml <- paste0('https://github.com/NewGraphEnvironment/', name_repo, '/raw/main/docs/sites_', name_project, '_', format(Sys.Date(), '%Y%m%d'), '_kml.zip')
+# Build the link to the kml file
+link_kml <- fs::path(params$repo_url, '/blob/main/docs/', paste0("sites_", project_region, "_", permit_year, "_", format(Sys.Date(), '%Y%m%d'), "_kml.zip"))
 
-# detail the fish likley to be tagged since we include so many. Varies from region to region and can be determined from
+# Specific the target species likely to be tagged since we include so many. Varies from region to region and can be determined from
 # past data (if this is a multi-year project)
-fish_tags <- c('rainbow trout', 'bull trout', 'burbot')
+target_species <- c("rainbow trout", "bull trout", "burbot")
 
 ```
 
@@ -89,13 +94,17 @@ Please note that permitting to Fisheries and Oceans Canada is requested for inve
 
 <br>
 
-This permit application can also be viewed online [at this link](`r knitr::asis_output(link_repo)`).  A summary of sites to be potentially assessed (including historic fish presence information available in FISS) is included as Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3). Details of fish species known within each watershed is presented in Table \@ref(tab:tab-fish) and an overview map displaying potential sample locations is included as Figure 1. A kml file of the sites is included as an attachment to the application and can also be downloaded [from here at this link](`r knitr::asis_output(link_kml)`).  There is an extensive amount of information contained in the kml file (accessed by clicking on sites) including brief summaries of background reporting data (when available).
+This permit application can also be viewed online [at this link](`r params$repo_url`). A summary of sites to be potentially assessed (including historic fish presence information available in FISS) is included as Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3). Details of fish species known within each watershed is presented in Table \@ref(tab:tab-fish) and an overview map displaying potential sample locations is included as Figure 1. A kml file of the sites is included as an attachment to the application and can also be downloaded [from here at this link](`r knitr::asis_output(link_kml)`).  There is an extensive amount of information contained in the kml file (accessed by clicking on sites) including brief summaries of background reporting data (when available).
 
 
 ## Brief description of project/activities {-}
-This work is a multi-year collaboration of many groups and an initiative of the Society for Ecosystem Restoration Northern BC. Funding for the project is through the Society for Ecosystem Restoration Northern BC, the Ministry of Transportation and Infrastructure (MoTI) and the Provincial Fish Passage Technical Working Group. Al Irvine, R.P.Bio from New Graph Environment Ltd. is leading the fieldwork with field and office collaboration with teams from throughout the study area. These sites were selected from 177 sites assessed for fish passage in the 2023 field season or through [past effectiveness monitoring work for MoTi](https://www.newgraphenvironment.com/fish_passage_moti_2022_reporting/). Although  incomplete at time of permit application, background reporting for 177 sites assessed for fish passage in the 2023 field season can be viewed below:
+This work is a multi-year collaboration of many groups and an initiative of the Society for Ecosystem Restoration Northern BC. Funding for the project is through the Fish and Wildlife Compensation Program and the Provincial Fish Passage Technical Working Group.  Al Irvine, R.P.Bio from New Graph Environment Ltd. is leading the fieldwork with field and office collaboration with teams from McLeod Lake Indian Band. Past reports are below:
 
-- https://www.newgraphenvironment.com/fish_passage_fraser_2023_reporting/
+- https://newgraphenvironment.github.io/Parsnip_Fish_Passage/
+- https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/
+- https://newgraphenvironment.github.io/fish_passage_peace_2022_reporting/
+- https://newgraphenvironment.github.io/fish_passage_peace_2023_reporting/
+- https://newgraphenvironment.github.io/fish_passage_peace_2024_reporting/
 
 
 
@@ -112,21 +121,22 @@ Sampling methodologies will be dependent on the site, fish species suspected, ty
 
 <br>
 
-Sampling is proposed at streams included in Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3) where we will be performing habitat confirmations and follow up site visits related to past habitat confirmations/fish passage remediations.  
+Sampling is proposed at streams included in Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3) where we will be performing habitat confirmation assessments and follow up site visits related to past habitat confirmations/fish passage remediations.  
+
 
 ### PIT Tagging {-}
 
 As part of this permit application we are proposing tagging for provincial jurisdiction species only.  PIT tagging is not 
-proposed for salmon species. Our study plan is (when time allows and PIT tagging is expected to increase our state of knowledge about the subject system) to electrofish small sites both upstream and downstream of priority culvert "barrier" sites and insert biomark APT12 PIT tags into the body cavity of select fish captured over 60mm.  Fish location (UTM), length and weight will also be collected.  In addition to providing information on abundance upstream and downstream of potential culvert restoration sites, the study will also provide information for monitoring programs to document fish movement, growth and survival at sites over multi-year timeframes. Main objectives are to determine
+proposed for salmon species. Our study plan is (when time allows and PIT tagging is expected to increase our state of knowledge about the subject system) to electrofish small sites both upstream and downstream of priority culvert "barrier" sites and insert biomark APT12 PIT tags into the body cavity of select fish captured over 60mm in fork length.  Site location (UTM), fish length and weight will also be collected.  In addition to providing information on abundance upstream and downstream of potential culvert restoration sites, the study will also provide information for monitoring programs to document fish movement, growth and survival at sites over multi-year time frames. Main objectives are to:
 
-1. if fish are moving into restored areas 
-2. if before any remediation is conducted - fish are moving through sites where stream crossing structures (culverts) likely cause connectivity issues  
-3. evaluate if productivity of the systems are increasing following bridge installation and/or if fish are moving upstream/downstream of where replaced/removed structures are located  
+  1. Determine if fish are moving into restored areas 
+  2. Determine if before any remediation is conducted - fish are moving through sites where stream crossing structures (culverts) likely cause connectivity issues  
+  3. Evaluate if productivity of the systems are increasing following bridge installation and/or if fish are moving upstream/downstream of where replaced/removed structures are located  
 
 <br>
 
-Dependent on how relevant tracking information would be to inform restoration actions, we may wish to tag select fish over 60mm in each site sampled.  We would like to apply for a permit allowing a maximum of 600 fish tagged with a maximum of 150 fish/stream.  Although we are requesting a maximum of 150 fish/stream, we have listed 150 fish of each species per stream because we will not know the species composition of the sites until the sampling occurs. In general, only salmonid and burbot species will be tagged with likely species present being `r knitr::combine_words(fish_tags)`. Based on past assessments in
-the same and similiar systems in the region, the number of fish tagged per stream are very likely to be much less than 150 however we are requesting the maximum number of fish to be tagged to facilitate permit application procedures and allow for flexibility in the field based on actual sampling results.
+Dependent on how relevant tracking information would be to inform restoration actions, we may wish to tag select fish over 60mm in each site sampled.  We would like to apply for a permit allowing a maximum of 600 fish tagged with a maximum of 150 fish/stream.  Although we are requesting a maximum of 150 fish/stream, we have listed 150 fish of each species per stream because we will not know the species composition of the sites until the sampling occurs. In general, only salmonid and burbot species will be tagged with likely species present being `r knitr::combine_words(target_species)`. Based on past assessments in
+the same and similiar systems in the region, the number of fish tagged per stream are very likely to be much less than 150, however we are requesting the maximum number of fish to be tagged to facilitate permit application procedures and allow for flexibility in the field based on actual sampling results.
 
 
 ## Risks associated with project/activities and associated mitigation {-}
@@ -159,17 +169,32 @@ Please do not hesitate to contact me if you need more information or have any qu
 Al Irvine, R.P.Bio 
 
 ```{r pull-db}
-conn <- fpr::fpr_db_conn()
 
-##pull out what we need from the database
-## in the future we can add these hashed notes to a tribble so that we can include that detail in the memo tables. Will
-# be helpful for regulators as well as field crews.
-# make two column tribble woith ids and notes
-ids_manual <- dplyr::tribble(
-  ~my_crossing_reference, ~assessment_comment,
-  15602716, "Tatsutnai Creek. Looks like private land and likely culvert. Confirmed chinook presence downstream and ~700m upstream of Nechako confluence in booth2022SummaryMinnow and booth2023SummaryMinnow",
-  19702017, "Bittner Creek. Fish sampling could use of habitats by chinook salmon for both spawning and rearing. Upstream railway crossing should be assessed. More info at https://www.newgraphenvironment.com/fish_passage_moti_2022_reporting/"
-)
+# Pull out the sites from previous years that we will be returning to again. We will grab these sites from the bcfishpass database
+ids <- c(
+  #arctic
+  125000, 
+  #fern
+  125261, 
+  # table 21k
+  125231,
+  #missinka remediated
+  125179,
+  ##missinka reference
+  125180,
+  ##trib to Kerry Lake where BCTS is deactivating.  Good flow
+  198692,
+  ##trib to McLeod with large outlet, ok flow and decent looking habitat. On reserve and close to community
+  198668,
+  ##trib to McLeod Lake right at the store and walking distance from community.  
+  ## good site for sampling to get people interested
+  #large outlet drop, ok flow and decent looking habitat. On reserve
+  198667
+  )
+
+
+# Now pull out all the new sites that we have identified in the planning file. 
+
 
 # import the gpkgs, join together, filter on permit_2024 == "true" and select the columns we wish to keep.  Put a csv version on file for reporducability
 path <- "~/Projects/gis/sern_lchl_necr_fran_2023/data_field/2023/form_pscis_2023.gpkg"
@@ -229,17 +254,21 @@ form_all <- dplyr::bind_rows(
 ids <- form_all |> 
   dplyr::pull(my_crossing_reference) 
 
+
+
 # grab the crossings data 
 sites_for_review <- fpr::fpr_db_query(
-glue::glue_sql("SELECT * FROM bcfishpass.crossings_vw WHERE modelled_crossing_id IN ({ids*})", .con = conn)
+  glue::glue(
+    "SELECT * FROM bcfishpass.crossings_vw 
+     WHERE stream_crossing_id IN ({glue::glue_collapse(ids, sep = ', ')})"
+  )
 )
 
 
 # grab the watershed codes
-# #NOTE how stream_corssing_id is now modelled_crossing_id
 wscodes <- fpr::fpr_db_query(
-  query = glue::glue_sql("SELECT DISTINCT ON (modelled_crossing_id)
-    a.modelled_crossing_id,
+  query = glue::glue("SELECT DISTINCT ON (stream_crossing_id)
+    a.stream_crossing_id,
     a.linear_feature_id,
     a.watershed_group_code,
     b.watershed_code_50k,
@@ -254,7 +283,7 @@ wscodes <- fpr::fpr_db_query(
     || '-' || substring(b.watershed_code_50k from 34 for 3)
     || '-' || substring(b.watershed_code_50k from 37 for 3)
     || '-' || substring(b.watershed_code_50k from 40 for 3)
-    || '-' || substring(b.watershed_code_50k from 43 for 3) AS wsc_code,
+    || '-' || substring(b.watershed_code_50k from 43 for 3) AS watershed_code_50k_parsed,
     b.blue_line_key_20k,
     b.watershed_key_20k,
     b.blue_line_key_50k,
@@ -263,14 +292,45 @@ wscodes <- fpr::fpr_db_query(
     FROM bcfishpass.crossings_vw a
     LEFT OUTER JOIN whse_basemapping.fwa_streams_20k_50k b
     ON a.linear_feature_id = b.linear_feature_id_20k
-    WHERE a.modelled_crossing_id IN ({ids*})
-    ORDER BY a.modelled_crossing_id, b.match_type;",
-    .con = conn
+    WHERE a.stream_crossing_id IN ({glue::glue_collapse(glue::single_quote(ids), sep = ', ')})
+    ORDER BY a.stream_crossing_id, b.match_type;"
   ) 
 )
 
 
-DBI::dbDisconnect(conn)
+# make a table with the watershed codes, stream name, fish species
+table_sites <- left_join(
+
+  sites_for_review |> 
+    select(id = aggregated_crossings_id, 
+         bt_network_km,
+         bt_spawning_km,
+         bt_rearing_km,
+         utm_zone,
+         utm_easting,
+         utm_northing,
+         mapsheet = dbm_mof_50k_grid,
+         watershed_group_code,
+         pscis_assessment_comment,
+         gnis_stream_name, 
+         stream_name = pscis_stream_name, 
+         observedspp_upstr),
+
+  wscodes |> 
+    select(id = stream_crossing_id, wsc_code) |> 
+    dplyr::mutate(id = as.character(id)),
+
+  by = 'id'
+) |>  
+  dplyr::mutate(dplyr::across(dplyr::starts_with('bt_'), ~round(., 1))) |> 
+  arrange(id) |>  
+  mutate(stream_name = case_when(
+    is.na(stream_name) ~ gnis_stream_name,
+    T ~ stream_name
+  )) |> 
+  select(-gnis_stream_name) |> 
+  sf::st_transform(crs = 4326) |> 
+  fpr::fpr_sp_assign_latlong(col_lon = "long") 
 
 ```
 
