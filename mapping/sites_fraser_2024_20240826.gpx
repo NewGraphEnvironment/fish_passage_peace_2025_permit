@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.5.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="52.891677425977221" minlon="-125.484920790219874" maxlat="54.183820434794370" maxlon="-119.318455685635925"/></metadata>              
+<wpt lat="54.1092195073456" lon="-124.698111600749115">
+  <name>5400202 - high</name>
+  <desc>bt_rearing - 2.3km. Very nice stream with good flow and abundant gravels upstream and downstream. Landowner indicated sockeye spotted along shoreline years ago. Massive outlet drop. Deserves habitat confirmation and consideration for replacement if no natural barriers upstream. There is a PSCIS assessed site (assessment_id = 7622) upstream that is a barrier.         </desc>
+</wpt>
+<wpt lat="54.10852319797074" lon="-124.708928816644558">
+  <name>5400203 - high</name>
+  <desc>bt_rearing - 1.7km. Very nice little stream with excellent flow for this time of year on a dry year. Crossing downstream on Gala Bay Road was fully embedded and passible at the time of the assessment. There is a historic chinook observation within this stream. This could be valuable Chinook rearing habitat and connectivity within the system should be restored, should no natural barriers be observed on a habitat confirmation assessment.           </desc>
+</wpt>
+<wpt lat="54.18382043479437" lon="-125.484920790219874">
+  <name>5401774 - high</name>
+  <desc>bt_rearing - 7.6km. Near entrance to lumber yard, Babine Forest Products Ltd. Barrier just upstream. Railway downstream has not been assessed yet. Big outlet drop with very deep pool. Wide stream channel with low water levels. RB upstream.</desc>
+</wpt>
+<wpt lat="53.81112022516902" lon="-122.964021254797657">
+  <name>9902577 - high</name>
+  <desc>bt_rearing - 127.8km. Chinook confirmed upstream in past.  Two pipes, only one had water flowing through at time of survey. Small outlet drop. Abundant boulders present downstream. High value habitat upstream with wide channel and gravels present. </desc>
+</wpt>
+<wpt lat="53.258289787772789" lon="-120.124195460610224">
+  <name>13900077 - mod</name>
+  <desc>bt_rearing - 5.4km. Wide channel and high flowing stream. Small outlet drop and high velocity in pipe with shallow flows over unembedded pipe. Chinook confirmed downstream near Fraser River confluence in the past. Railway bridge downstream seen in photos. </desc>
+</wpt>
+<wpt lat="53.540982444346483" lon="-120.724461275920959">
+  <name>13900100 - high</name>
+  <desc>bt_rearing - 25.2km.  High value spawning and rearing habitat upstream.  Massive outlet pool with erosion indicates culvert is extremely under sized.   Candy et al 2002 notes chinoook spawning in this system.  </desc>
+</wpt>
+<wpt lat="53.829678028055717" lon="-121.383735580293589">
+  <name>13900201 - medium</name>
+  <desc>bt_rearing - 12.5km. Big beaver dam near inlet of culvert spanning across whole channel approx 1.2m high.  Boulders in pipe near inlet creating small drop and increasing velocity.  Channel widens downstream, high value habitat. RB and CCG confirmed upstream and downstream with chinook observed way downstream at mouth.    Low gradient upstream and downsteram with decent outlet drop so resampling to determine chinook presence could be insightful.</desc>
+</wpt>
+<wpt lat="53.893117355305762" lon="-121.662112002009565">
+  <name>13900260 - high</name>
+  <desc>bt_rearing - 0.9km. Large stream with abundant gravels present upstream suitable for spawning. Massive outlet drop with powerline riparian cleared downstream of the highway.   Old growth cedar hemlock riparian within Sugar bowl grizzly den provincial park. Follow up with habitat confirmation recommended.                 </desc>
+</wpt>
+<wpt lat="53.879002739681965" lon="-121.370598739527495">
+  <name>13900308 - low</name>
+  <desc>bt_rearing - 5km. Abundant gravels present downstream and upstream. Small fish seen in culvert and downstream. Theres flow upstream and downstream but culvert is backwatered.  Unassessed railway crossing ~900m upstream.</desc>
+</wpt>
+<wpt lat="53.873074484903995" lon="-121.356892718609771">
+  <name>13900309 - mod</name>
+  <desc>bt_rearing - 2.8km. Predominantly fine substrate downstream but abundant gravels upstream as. Wide channel with good flow immediately adjacent to Fraser manstem. Small debris jam near outletbackwatering pipe.  Does not appear to be likley barrier to adults but could have value for juvenile rearing and potentially hindered access during high flow tijes when refuge needed.  Sampling could help determine if chinook are accessing upstream. Very deep, muddy outlet pool.  Unassessed railway crossing ~900m upstream.</desc>
+</wpt>
+<wpt lat="53.917558608044878" lon="-121.747210344441442">
+  <name>13903184 - high</name>
+  <desc>bt_rearing - 88.4km. Very wide stream with high flow. Velocity is high in culvert. Very deep and big outlet pool, depth estimated. Known salmon spawning location. Chinook confirmed with carcass noted just upstream in 2022 by same field team. </desc>
+</wpt>
+<wpt lat="53.895499097526148" lon="-121.404372947297574">
+  <name>13903452 - high</name>
+  <desc>bt_rearing - 0km.  Very nice stream with abundant gravels and good flow upstream. Some old growth cedar within the upstream riparian area. Culvert must be bent in the middle because cannot see through. Pipe gradient estimated. Large outlet drop and deep outlet pool indicates culvert is extremely undersized.   Penny Road is only access in and out of the community of Penny.  Unassessed railway crossing ~300m upstream.</desc>
+</wpt>
+<wpt lat="54.108022423788185" lon="-124.138619451356888">
+  <name>15600119 - high</name>
+  <desc>bt_rearing - 28.8km. High value habitat, wide channel with good flow and gravels. Known chinook system downstream. Culvert is very damaged near outlet. There are holes on bottom of pipe about 5m from outlet where water is running through and under the pipe. Culvert is angled down near outlet.  Good candidate for replacement.  </desc>
+</wpt>
+<wpt lat="54.085297011657438" lon="-124.208918651144657">
+  <name>15600122 - high</name>
+  <desc>bt_rearing - 16.2km. Big, deep outlet pool. Water is flowing from inlet under the pipe for ~10m and then entering pipe through small hole and then flowing in pipe to outlet.  Very near Nechako on unpaved road.  Perched pipe.</desc>
+</wpt>
+<wpt lat="54.106430174820019" lon="-124.543258259065311">
+  <name>15600277 - high</name>
+  <desc>bt_rearing - 6.3km. Very nice stream with excellent flow for this time of year on a dry year.  Very large deep outlet pool with extensive erosion undercutting the main pipe and 0.6 m overflow. Locally known as Dog Creek. Chinook captured upstream and downstream of Dog Creek FSR in 2021, 2022, and 2023 reported here https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=62942.  Connected to the Nechako River with observed chinook points downstream adjacent to the confluence. Road edge is failing at the culvert and eroding into stream. Highly degraded site upstream that would be a good candidate for restoration.      </desc>
+</wpt>
+<wpt lat="54.128152585871263" lon="-124.470371538774828">
+  <name>15600285 - high</name>
+  <desc>bt_rearing - 36.3km. Two pipes (one at 1.8m, one at 1.5m), both with similar outlet drops. Inlet side has extensive beaver activity. Beaver dams are covering the inlet and culverts are not visible. Huge wetland upstream. Very big outlet pool so depth was estimated. Chinook were captured downstream of Settlement Road culvert in 2021 (https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=61991) and Rainbow Trout observed in stream from 2021-2023 (https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=61202 and https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=62942). Culverts should be replaced and beaver activity managed. Habitat looks good downstream. High habitat value at crossing upstream. </desc>
+</wpt>
+<wpt lat="54.117525661734504" lon="-124.517436250319832">
+  <name>15602716 - NA</name>
+  <desc>bt_rearing - 34km. Tatsutnai Creek. Looks like private land and likely culvert. Confirmed chinook presence downstream and ~700m upstream of Nechako confluence in booth2022SummaryMinnow and booth2023SummaryMinnow</desc>
+</wpt>
+<wpt lat="53.933582824016419" lon="-122.671582338921539">
+  <name>19702017 - NA</name>
+  <desc>bt_rearing - 10km. Bittner Creek. Fish sampling could use of habitats by chinook salmon for both spawning and rearing. Upstream railway crossing should be assessed. More info at https://www.newgraphenvironment.com/fish_passage_moti_2022_reporting/</desc>
+</wpt>
+<wpt lat="52.891677425977221" lon="-119.318455685635925">
+  <name>22201176 - high</name>
+  <desc>bt_rearing - 0.5km. Very nice stream with salmon point in FISS located upstream. Very good flow with some pools present to 80cm deep upstream. Unassessed railway crossing approximately 200m upstream.  There is no crossing at the pipeline but construction activities have resulted in a small cascade of boulders at the pipe which is similar to the natural cascade section observed approximately 50m upstream.  Railway crossing downstream which is ranked as a barrier.         </desc>
+</wpt>
+<wpt lat="53.177947579223066" lon="-119.903569307275532">
+  <name>22201229 - high</name>
+  <desc>bt_rearing - 20.7km. Culvert is undersized for a stream of this size. High flow,  chanel is just over 10m wide upstream. Chinook confirmed downstream in the past.  </desc>
+</wpt>
+<wpt lat="54.077872168878294" lon="-121.836346318667665">
+  <name>24715754 - high</name>
+  <desc>bt_rearing - 40.2km. Three pipes total, two at 1.2m diameter which were completely submerged underwater and one at 2m diameter which was 100% backwatered.  Assuming embedded due to the depth of the backwatering. Bridge located just upstream on River Road.  Unassessed railway crossing located downstream which, based off satalite imagery, leads to a wetland area, but no modelled crossing present.  There is a second unassessed crossing (24715896) downstream which should be assessed. Multiple non-salmonid FISS observations downstream. Chinook and sockeye salmon have been observed just upstream of the confluence of this creek with the Fraser River, rougly 1km downstream of the crossing.    </desc>
+</wpt>
+</gpx>

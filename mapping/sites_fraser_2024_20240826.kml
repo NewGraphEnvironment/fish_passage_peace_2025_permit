@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="sites_fraser_2024_20240826" id="sites_fraser_2024_20240826">
+	<SimpleField name="id" type="float"></SimpleField>
+	<SimpleField name="bt_network_km" type="float"></SimpleField>
+	<SimpleField name="bt_spawning_km" type="float"></SimpleField>
+	<SimpleField name="bt_rearing_km" type="float"></SimpleField>
+	<SimpleField name="utm_zone" type="int"></SimpleField>
+	<SimpleField name="utm_easting" type="int"></SimpleField>
+	<SimpleField name="utm_northing" type="int"></SimpleField>
+	<SimpleField name="mapsheet" type="string"></SimpleField>
+	<SimpleField name="watershed_group_code" type="string"></SimpleField>
+	<SimpleField name="observedspp_upstr" type="string"></SimpleField>
+	<SimpleField name="wsc_code" type="string"></SimpleField>
+	<SimpleField name="moti_chris_culvert_id" type="int"></SimpleField>
+	<SimpleField name="my_priority" type="string"></SimpleField>
+	<SimpleField name="stream_name" type="string"></SimpleField>
+	<SimpleField name="road_name" type="string"></SimpleField>
+	<SimpleField name="assessment_comment" type="string"></SimpleField>
+	<SimpleField name="long" type="float"></SimpleField>
+	<SimpleField name="lat" type="float"></SimpleField>
+</Schema>
+<Folder><name>sites_fraser_2024_20240826</name>
+  <Placemark>
+	<name>5400202 - high - MoTi_ID = 1790951</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">5400202</SimpleData>
+		<SimpleData name="bt_network_km">13.1</SimpleData>
+		<SimpleData name="bt_spawning_km">0</SimpleData>
+		<SimpleData name="bt_rearing_km">2.3</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">388986</SimpleData>
+		<SimpleData name="utm_northing">5997007</SimpleData>
+		<SimpleData name="mapsheet">093K.104</SimpleData>
+		<SimpleData name="watershed_group_code">FRAN</SimpleData>
+		<SimpleData name="wsc_code">180-374000-33800-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1790951</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Tributary to Fraser Lake</SimpleData>
+		<SimpleData name="road_name">Gala Bay Road </SimpleData>
+		<SimpleData name="assessment_comment">Very nice stream with good flow and abundant gravels upstream and downstream. Landowner indicated sockeye spotted along shoreline years ago. Massive outlet drop. Deserves habitat confirmation and consideration for replacement if no natural barriers upstream. There is a PSCIS assessed site (assessment_id = 7622) upstream that is a barrier.         </SimpleData>
+		<SimpleData name="long">-124.698111600749</SimpleData>
+		<SimpleData name="lat">54.1092195073456</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.698111600749,54.1092195073456,677.457510924532</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5400203 - high - MoTi_ID = 1794198</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">5400203</SimpleData>
+		<SimpleData name="bt_network_km">16.4</SimpleData>
+		<SimpleData name="bt_spawning_km">1</SimpleData>
+		<SimpleData name="bt_rearing_km">1.7</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">388277</SimpleData>
+		<SimpleData name="utm_northing">5996946</SimpleData>
+		<SimpleData name="mapsheet">093K.104</SimpleData>
+		<SimpleData name="watershed_group_code">FRAN</SimpleData>
+		<SimpleData name="wsc_code">180-374000-36600-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1794198</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Scotch Creek</SimpleData>
+		<SimpleData name="road_name">Stella Road</SimpleData>
+		<SimpleData name="assessment_comment">Very nice little stream with excellent flow for this time of year on a dry year. Crossing downstream on Gala Bay Road was fully embedded and passible at the time of the assessment. There is a historic chinook observation within this stream. This could be valuable Chinook rearing habitat and connectivity within the system should be restored, should no natural barriers be observed on a habitat confirmation assessment.           </SimpleData>
+		<SimpleData name="long">-124.708928816645</SimpleData>
+		<SimpleData name="lat">54.1085231979707</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.708928816645,54.1085231979707,685.593469266</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5401774 - high - MoTi_ID = NA</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">5401774</SimpleData>
+		<SimpleData name="bt_network_km">16.7</SimpleData>
+		<SimpleData name="bt_spawning_km">6.8</SimpleData>
+		<SimpleData name="bt_rearing_km">7.6</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">337849</SimpleData>
+		<SimpleData name="utm_northing">6006826</SimpleData>
+		<SimpleData name="mapsheet">093K.102</SimpleData>
+		<SimpleData name="watershed_group_code">FRAN</SimpleData>
+		<SimpleData name="observedspp_upstr">RB</SimpleData>
+		<SimpleData name="wsc_code">180-374000-95200-01900-6160-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Sheraton Creek</SimpleData>
+		<SimpleData name="road_name">Unnamed</SimpleData>
+		<SimpleData name="assessment_comment">Near entrance to lumber yard, Babine Forest Products Ltd. Barrier just upstream. Railway downstream has not been assessed yet. Big outlet drop with very deep pool. Wide stream channel with low water levels. RB upstream.</SimpleData>
+		<SimpleData name="long">-125.48492079022</SimpleData>
+		<SimpleData name="lat">54.1838204347944</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.48492079022,54.1838204347944,714.717278941982</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>9902577 - high - MoTi_ID = 4166</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">9902577</SimpleData>
+		<SimpleData name="bt_network_km">543.5</SimpleData>
+		<SimpleData name="bt_spawning_km">46.9</SimpleData>
+		<SimpleData name="bt_rearing_km">127.8</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">502369</SimpleData>
+		<SimpleData name="utm_northing">5962508</SimpleData>
+		<SimpleData name="mapsheet">093G.123</SimpleData>
+		<SimpleData name="watershed_group_code">LCHL</SimpleData>
+		<SimpleData name="observedspp_upstr">BB;CAS;CBC;CH;CSU;DV;KO;LNC;LSU;MW;NSC;PCC;RB;RSC;SU</SimpleData>
+		<SimpleData name="wsc_code">180-069000-07200-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">4166</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Beaverley Creek</SimpleData>
+		<SimpleData name="road_name">Highway 16</SimpleData>
+		<SimpleData name="assessment_comment">Chinook confirmed upstream in past.  Two pipes, only one had water flowing through at time of survey. Small outlet drop. Abundant boulders present downstream. High value habitat upstream with wide channel and gravels present. </SimpleData>
+		<SimpleData name="long">-122.964021254798</SimpleData>
+		<SimpleData name="lat">53.811120225169</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.964021254798,53.811120225169,633.55694659281</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13900077 - mod - MoTi_ID = 30365</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13900077</SimpleData>
+		<SimpleData name="bt_network_km">12.1</SimpleData>
+		<SimpleData name="bt_spawning_km">3.7</SimpleData>
+		<SimpleData name="bt_rearing_km">5.4</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">691820</SimpleData>
+		<SimpleData name="utm_northing">5904863</SimpleData>
+		<SimpleData name="mapsheet">093H.110</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="wsc_code">100-842800-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">30365</SimpleData>
+		<SimpleData name="my_priority">mod</SimpleData>
+		<SimpleData name="stream_name">Hankins Creek</SimpleData>
+		<SimpleData name="road_name">Eddy Rd</SimpleData>
+		<SimpleData name="assessment_comment">Wide channel and high flowing stream. Small outlet drop and high velocity in pipe with shallow flows over unembedded pipe. Chinook confirmed downstream near Fraser River confluence in the past. Railway bridge downstream seen in photos. </SimpleData>
+		<SimpleData name="long">-120.12419546061</SimpleData>
+		<SimpleData name="lat">53.2582897877728</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-120.12419546061,53.2582897877728,724.867990811571</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13900100 - high - MoTi_ID = 3751</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13900100</SimpleData>
+		<SimpleData name="bt_network_km">80.6</SimpleData>
+		<SimpleData name="bt_spawning_km">17.7</SimpleData>
+		<SimpleData name="bt_rearing_km">25.2</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">650785</SimpleData>
+		<SimpleData name="utm_northing">5934862</SimpleData>
+		<SimpleData name="mapsheet">093H.114</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="observedspp_upstr">EB;LKC;RB;RSC;ST</SimpleData>
+		<SimpleData name="wsc_code">100-770300-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">3751</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Snowshoe Creek</SimpleData>
+		<SimpleData name="road_name">Highway 16a</SimpleData>
+		<SimpleData name="assessment_comment">High value spawning and rearing habitat upstream.  Massive outlet pool with erosion indicates culvert is extremely under sized.   Candy et al 2002 notes chinoook spawning in this system.  </SimpleData>
+		<SimpleData name="long">-120.724461275921</SimpleData>
+		<SimpleData name="lat">53.5409824443465</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-120.724461275921,53.5409824443465,818</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13900201 - medium - MoTi_ID = 1992674</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13900201</SimpleData>
+		<SimpleData name="bt_network_km">51.4</SimpleData>
+		<SimpleData name="bt_spawning_km">8.8</SimpleData>
+		<SimpleData name="bt_rearing_km">12.5</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">606373</SimpleData>
+		<SimpleData name="utm_northing">5965783</SimpleData>
+		<SimpleData name="mapsheet">093H.122</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="observedspp_upstr">CCG;RB</SimpleData>
+		<SimpleData name="wsc_code">100-698700-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1992674</SimpleData>
+		<SimpleData name="my_priority">medium</SimpleData>
+		<SimpleData name="stream_name">Driscoll Creek</SimpleData>
+		<SimpleData name="road_name">Highway 16</SimpleData>
+		<SimpleData name="assessment_comment">Big beaver dam near inlet of culvert spanning across whole channel approx 1.2m high.  Boulders in pipe near inlet creating small drop and increasing velocity.  Channel widens downstream, high value habitat. RB and CCG confirmed upstream and downstream with chinook observed way downstream at mouth.    Low gradient upstream and downsteram with decent outlet drop so resampling to determine chinook presence could be insightful.</SimpleData>
+		<SimpleData name="long">-121.383735580294</SimpleData>
+		<SimpleData name="lat">53.8296780280557</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.383735580294,53.8296780280557,670.473271391142</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13900260 - high - MoTi_ID = 1992815</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13900260</SimpleData>
+		<SimpleData name="bt_network_km">4.2</SimpleData>
+		<SimpleData name="bt_spawning_km">0</SimpleData>
+		<SimpleData name="bt_rearing_km">0.9</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">587920</SimpleData>
+		<SimpleData name="utm_northing">5972459</SimpleData>
+		<SimpleData name="mapsheet">093H.121</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="wsc_code">100-683800-01900-12800-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1992815</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Tributary to Sugarbowl Creek</SimpleData>
+		<SimpleData name="road_name">Highway 16</SimpleData>
+		<SimpleData name="assessment_comment">Large stream with abundant gravels present upstream suitable for spawning. Massive outlet drop with powerline riparian cleared downstream of the highway.   Old growth cedar hemlock riparian within Sugar bowl grizzly den provincial park. Follow up with habitat confirmation recommended.                 </SimpleData>
+		<SimpleData name="long">-121.66211200201</SimpleData>
+		<SimpleData name="lat">53.8931173553058</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.66211200201,53.8931173553058,764.802534009437</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13900308 - low - MoTi_ID = NA</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13900308</SimpleData>
+		<SimpleData name="bt_network_km">11.2</SimpleData>
+		<SimpleData name="bt_spawning_km">1.8</SimpleData>
+		<SimpleData name="bt_rearing_km">5</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">607112</SimpleData>
+		<SimpleData name="utm_northing">5971290</SimpleData>
+		<SimpleData name="mapsheet">093H.122</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="wsc_code">100-705400-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="my_priority">low</SimpleData>
+		<SimpleData name="stream_name">Tributary to Fraser River </SimpleData>
+		<SimpleData name="road_name">Penny Rd</SimpleData>
+		<SimpleData name="assessment_comment">Abundant gravels present downstream and upstream. Small fish seen in culvert and downstream. Theres flow upstream and downstream but culvert is backwatered.  Unassessed railway crossing ~900m upstream.</SimpleData>
+		<SimpleData name="long">-121.370598739527</SimpleData>
+		<SimpleData name="lat">53.879002739682</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.370598739527,53.879002739682,626.306625434957</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13900309 - mod - MoTi_ID = NA</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13900309</SimpleData>
+		<SimpleData name="bt_network_km">4.2</SimpleData>
+		<SimpleData name="bt_spawning_km">1.5</SimpleData>
+		<SimpleData name="bt_rearing_km">2.8</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">608028</SimpleData>
+		<SimpleData name="utm_northing">5970651</SimpleData>
+		<SimpleData name="mapsheet">093H.122</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="wsc_code">100-706300-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="my_priority">mod</SimpleData>
+		<SimpleData name="stream_name">Tributary to Fraser River </SimpleData>
+		<SimpleData name="road_name">Penny Rd</SimpleData>
+		<SimpleData name="assessment_comment">Predominantly fine substrate downstream but abundant gravels upstream as. Wide channel with good flow immediately adjacent to Fraser manstem. Small debris jam near outletbackwatering pipe.  Does not appear to be likley barrier to adults but could have value for juvenile rearing and potentially hindered access during high flow tijes when refuge needed.  Sampling could help determine if chinook are accessing upstream. Very deep, muddy outlet pool.  Unassessed railway crossing ~900m upstream.</SimpleData>
+		<SimpleData name="long">-121.35689271861</SimpleData>
+		<SimpleData name="lat">53.873074484904</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.35689271861,53.873074484904,623.624238953792</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13903184 - high - MoTi_ID = 3750</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13903184</SimpleData>
+		<SimpleData name="bt_network_km">210.7</SimpleData>
+		<SimpleData name="bt_spawning_km">72.2</SimpleData>
+		<SimpleData name="bt_rearing_km">88.4</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">582280</SimpleData>
+		<SimpleData name="utm_northing">5975076</SimpleData>
+		<SimpleData name="mapsheet">093H.121</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="observedspp_upstr">BT;CC;CCG;CH;LSU;RB</SimpleData>
+		<SimpleData name="wsc_code">100-683800-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">3750</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Kenneth Creek</SimpleData>
+		<SimpleData name="road_name">Highway 16</SimpleData>
+		<SimpleData name="assessment_comment">Very wide stream with high flow. Velocity is high in culvert. Very deep and big outlet pool, depth estimated. Known salmon spawning location. Chinook confirmed with carcass noted just upstream in 2022 by same field team. </SimpleData>
+		<SimpleData name="long">-121.747210344441</SimpleData>
+		<SimpleData name="lat">53.9175586080449</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.747210344441,53.9175586080449,647.132894193984</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13903452 - high - MoTi_ID = NA</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">13903452</SimpleData>
+		<SimpleData name="bt_network_km">0.8</SimpleData>
+		<SimpleData name="bt_spawning_km">0</SimpleData>
+		<SimpleData name="bt_rearing_km">0</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">604850</SimpleData>
+		<SimpleData name="utm_northing">5973075</SimpleData>
+		<SimpleData name="mapsheet">093H.122</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Tributary to Fraser River</SimpleData>
+		<SimpleData name="road_name">Penny Rd</SimpleData>
+		<SimpleData name="assessment_comment">Very nice stream with abundant gravels and good flow upstream. Some old growth cedar within the upstream riparian area. Culvert must be bent in the middle because cannot see through. Pipe gradient estimated. Large outlet drop and deep outlet pool indicates culvert is extremely undersized.   Penny Road is only access in and out of the community of Penny.  Unassessed railway crossing ~300m upstream.</SimpleData>
+		<SimpleData name="long">-121.404372947298</SimpleData>
+		<SimpleData name="lat">53.8954990975261</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.404372947298,53.8954990975261,658.871946474767</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>15600119 - high - MoTi_ID = 1806163</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">15600119</SimpleData>
+		<SimpleData name="bt_network_km">105.9</SimpleData>
+		<SimpleData name="bt_spawning_km">10.2</SimpleData>
+		<SimpleData name="bt_rearing_km">28.8</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">425559</SimpleData>
+		<SimpleData name="utm_northing">5996140</SimpleData>
+		<SimpleData name="mapsheet">093K.105</SimpleData>
+		<SimpleData name="watershed_group_code">NECR</SimpleData>
+		<SimpleData name="observedspp_upstr">LKC;LSU</SimpleData>
+		<SimpleData name="wsc_code">180-296000-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1806163</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Clear Creek</SimpleData>
+		<SimpleData name="road_name">Highway 27 S</SimpleData>
+		<SimpleData name="assessment_comment">High value habitat, wide channel with good flow and gravels. Known chinook system downstream. Culvert is very damaged near outlet. There are holes on bottom of pipe about 5m from outlet where water is running through and under the pipe. Culvert is angled down near outlet.  Good candidate for replacement.  </SimpleData>
+		<SimpleData name="long">-124.138619451357</SimpleData>
+		<SimpleData name="lat">54.1080224237882</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.138619451357,54.1080224237882,718.803656787162</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>15600122 - high - MoTi_ID = 1804624</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">15600122</SimpleData>
+		<SimpleData name="bt_network_km">57.8</SimpleData>
+		<SimpleData name="bt_spawning_km">11</SimpleData>
+		<SimpleData name="bt_rearing_km">16.2</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">420920</SimpleData>
+		<SimpleData name="utm_northing">5993688</SimpleData>
+		<SimpleData name="mapsheet">093K.105</SimpleData>
+		<SimpleData name="watershed_group_code">NECR</SimpleData>
+		<SimpleData name="wsc_code">180-305100-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1804624</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Redmond Creek</SimpleData>
+		<SimpleData name="road_name">Braeside Rd</SimpleData>
+		<SimpleData name="assessment_comment">Big, deep outlet pool. Water is flowing from inlet under the pipe for ~10m and then entering pipe through small hole and then flowing in pipe to outlet.  Very near Nechako on unpaved road.  Perched pipe.</SimpleData>
+		<SimpleData name="long">-124.208918651145</SimpleData>
+		<SimpleData name="lat">54.0852970116574</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.208918651145,54.0852970116574,671</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>15600277 - high - MoTi_ID = 1794340</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">15600277</SimpleData>
+		<SimpleData name="bt_network_km">42.9</SimpleData>
+		<SimpleData name="bt_spawning_km">4.2</SimpleData>
+		<SimpleData name="bt_rearing_km">6.3</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">399102</SimpleData>
+		<SimpleData name="utm_northing">5996464</SimpleData>
+		<SimpleData name="mapsheet">093K.104</SimpleData>
+		<SimpleData name="watershed_group_code">NECR</SimpleData>
+		<SimpleData name="observedspp_upstr">SP</SimpleData>
+		<SimpleData name="wsc_code">180-364700-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1794340</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Tributary to Nechako River </SimpleData>
+		<SimpleData name="road_name">Dog Creek Road</SimpleData>
+		<SimpleData name="assessment_comment">Very nice stream with excellent flow for this time of year on a dry year.  Very large deep outlet pool with extensive erosion undercutting the main pipe and 0.6 m overflow. Locally known as Dog Creek. Chinook captured upstream and downstream of Dog Creek FSR in 2021, 2022, and 2023 reported here https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=62942.  Connected to the Nechako River with observed chinook points downstream adjacent to the confluence. Road edge is failing at the culvert and eroding into stream. Highly degraded site upstream that would be a good candidate for restoration.      </SimpleData>
+		<SimpleData name="long">-124.543258259065</SimpleData>
+		<SimpleData name="lat">54.10643017482</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.543258259065,54.10643017482,680.05689793315</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>15600285 - high - MoTi_ID = 1793922</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">15600285</SimpleData>
+		<SimpleData name="bt_network_km">141.2</SimpleData>
+		<SimpleData name="bt_spawning_km">16</SimpleData>
+		<SimpleData name="bt_rearing_km">36.3</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">403917</SimpleData>
+		<SimpleData name="utm_northing">5998779</SimpleData>
+		<SimpleData name="mapsheet">093K.104</SimpleData>
+		<SimpleData name="watershed_group_code">NECR</SimpleData>
+		<SimpleData name="observedspp_upstr">RB</SimpleData>
+		<SimpleData name="wsc_code">180-350800-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1793922</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Nine Mile Creek</SimpleData>
+		<SimpleData name="road_name">Settlement Rd</SimpleData>
+		<SimpleData name="assessment_comment">Two pipes (one at 1.8m, one at 1.5m), both with similar outlet drops. Inlet side has extensive beaver activity. Beaver dams are covering the inlet and culverts are not visible. Huge wetland upstream. Very big outlet pool so depth was estimated. Chinook were captured downstream of Settlement Road culvert in 2021 (https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=61991) and Rainbow Trout observed in stream from 2021-2023 (https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=61202 and https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=62942). Culverts should be replaced and beaver activity managed. Habitat looks good downstream. High habitat value at crossing upstream. </SimpleData>
+		<SimpleData name="long">-124.470371538775</SimpleData>
+		<SimpleData name="lat">54.1281525858713</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.470371538775,54.1281525858713,750.137127511339</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>15602716 - NA - MoTi_ID = NA</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">15602716</SimpleData>
+		<SimpleData name="bt_network_km">132.2</SimpleData>
+		<SimpleData name="bt_spawning_km">14.6</SimpleData>
+		<SimpleData name="bt_rearing_km">34</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">400817</SimpleData>
+		<SimpleData name="utm_northing">5997662</SimpleData>
+		<SimpleData name="mapsheet">093K.104</SimpleData>
+		<SimpleData name="watershed_group_code">NECR</SimpleData>
+		<SimpleData name="observedspp_upstr">RB</SimpleData>
+		<SimpleData name="wsc_code">180-360100-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="stream_name">Tatsutnai Creek</SimpleData>
+		<SimpleData name="assessment_comment">Tatsutnai Creek. Looks like private land and likely culvert. Confirmed chinook presence downstream and ~700m upstream of Nechako confluence in booth2022SummaryMinnow and booth2023SummaryMinnow</SimpleData>
+		<SimpleData name="long">-124.51743625032</SimpleData>
+		<SimpleData name="lat">54.1175256617345</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-124.51743625032,54.1175256617345,704.366966384202</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>19702017 - NA - MoTi_ID = NA</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">19702017</SimpleData>
+		<SimpleData name="bt_network_km">43.7</SimpleData>
+		<SimpleData name="bt_spawning_km">9.6</SimpleData>
+		<SimpleData name="bt_rearing_km">10</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">521562</SimpleData>
+		<SimpleData name="utm_northing">5976182</SimpleData>
+		<SimpleData name="mapsheet">093G.124</SimpleData>
+		<SimpleData name="watershed_group_code">TABR</SimpleData>
+		<SimpleData name="observedspp_upstr">CCG;CH;CSU;LSU;RB;RSC;SP;SU;WSU</SimpleData>
+		<SimpleData name="wsc_code">100-572700-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="stream_name">Bittner Creek</SimpleData>
+		<SimpleData name="assessment_comment">Bittner Creek. Fish sampling could use of habitats by chinook salmon for both spawning and rearing. Upstream railway crossing should be assessed. More info at https://www.newgraphenvironment.com/fish_passage_moti_2022_reporting/</SimpleData>
+		<SimpleData name="long">-122.671582338922</SimpleData>
+		<SimpleData name="lat">53.9335828240164</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.671582338922,53.9335828240164,573.055999999982</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>22201176 - high - MoTi_ID = 1467202</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">22201176</SimpleData>
+		<SimpleData name="bt_network_km">2.1</SimpleData>
+		<SimpleData name="bt_spawning_km">0</SimpleData>
+		<SimpleData name="bt_rearing_km">0.5</SimpleData>
+		<SimpleData name="utm_zone">11</SimpleData>
+		<SimpleData name="utm_easting">344030</SimpleData>
+		<SimpleData name="utm_northing">5862738</SimpleData>
+		<SimpleData name="mapsheet">083D.122</SimpleData>
+		<SimpleData name="watershed_group_code">UFRA</SimpleData>
+		<SimpleData name="observedspp_upstr">SA</SimpleData>
+		<SimpleData name="wsc_code">100-907400-42800-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1467202</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Teepee Creek</SimpleData>
+		<SimpleData name="road_name">Highway 5</SimpleData>
+		<SimpleData name="assessment_comment">Very nice stream with salmon point in FISS located upstream. Very good flow with some pools present to 80cm deep upstream. Unassessed railway crossing approximately 200m upstream.  There is no crossing at the pipeline but construction activities have resulted in a small cascade of boulders at the pipe which is similar to the natural cascade section observed approximately 50m upstream.  Railway crossing downstream which is ranked as a barrier.         </SimpleData>
+		<SimpleData name="long">-119.318455685636</SimpleData>
+		<SimpleData name="lat">52.8916774259772</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-119.318455685636,52.8916774259772,792.751692925536</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>22201229 - high - MoTi_ID = 29925</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">22201229</SimpleData>
+		<SimpleData name="bt_network_km">25.8</SimpleData>
+		<SimpleData name="bt_spawning_km">9.2</SimpleData>
+		<SimpleData name="bt_rearing_km">20.7</SimpleData>
+		<SimpleData name="utm_zone">11</SimpleData>
+		<SimpleData name="utm_easting">305966</SimpleData>
+		<SimpleData name="utm_northing">5896003</SimpleData>
+		<SimpleData name="mapsheet">083E.101</SimpleData>
+		<SimpleData name="watershed_group_code">UFRA</SimpleData>
+		<SimpleData name="wsc_code">100-864700-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">29925</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Holliday Creek</SimpleData>
+		<SimpleData name="road_name">Highway 16</SimpleData>
+		<SimpleData name="assessment_comment">Culvert is undersized for a stream of this size. High flow,  chanel is just over 10m wide upstream. Chinook confirmed downstream in the past.  </SimpleData>
+		<SimpleData name="long">-119.903569307276</SimpleData>
+		<SimpleData name="lat">53.1779475792231</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-119.903569307276,53.1779475792231,770.817009287775</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>24715754 - high - MoTi_ID = 1994579</name>
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2024_20240826">
+		<SimpleData name="id">24715754</SimpleData>
+		<SimpleData name="bt_network_km">94.8</SimpleData>
+		<SimpleData name="bt_spawning_km">33.8</SimpleData>
+		<SimpleData name="bt_rearing_km">40.2</SimpleData>
+		<SimpleData name="utm_zone">10</SimpleData>
+		<SimpleData name="utm_easting">576133</SimpleData>
+		<SimpleData name="utm_northing">5992812</SimpleData>
+		<SimpleData name="mapsheet">093I.101</SimpleData>
+		<SimpleData name="watershed_group_code">MORK</SimpleData>
+		<SimpleData name="observedspp_upstr">RB</SimpleData>
+		<SimpleData name="wsc_code">100-654700-00000-00000-0000-0000-000-000-000-000-000-000</SimpleData>
+		<SimpleData name="moti_chris_culvert_id">1994579</SimpleData>
+		<SimpleData name="my_priority">high</SimpleData>
+		<SimpleData name="stream_name">Tributary to Fraser River </SimpleData>
+		<SimpleData name="road_name">Upper Fraser Road</SimpleData>
+		<SimpleData name="assessment_comment">Three pipes total, two at 1.2m diameter which were completely submerged underwater and one at 2m diameter which was 100% backwatered.  Assuming embedded due to the depth of the backwatering. Bridge located just upstream on River Road.  Unassessed railway crossing located downstream which, based off satalite imagery, leads to a wetland area, but no modelled crossing present.  There is a second unassessed crossing (24715896) downstream which should be assessed. Multiple non-salmonid FISS observations downstream. Chinook and sockeye salmon have been observed just upstream of the confluence of this creek with the Fraser River, rougly 1km downstream of the crossing.    </SimpleData>
+		<SimpleData name="long">-121.836346318668</SimpleData>
+		<SimpleData name="lat">54.0778721688783</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.836346318668,54.0778721688783,604.872701697342</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
