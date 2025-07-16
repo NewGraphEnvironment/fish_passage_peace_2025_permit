@@ -9,7 +9,7 @@ links-to-footnotes: false
 paged-footnotes: false
 params:
   repo_url: 'https://github.com/lucy-schick/fish_passage_peace_2025_permit'
-  report_url: 'https://www.newgraphenvironment.com/fish_passage_peace_2025_permit/'
+  report_url: 'https:/lucy-schick.github.io/fish_passage_peace_2025_permit/'
   gis_project_name: "sern_peace_fwcp_2023"
   update_packages: FALSE
   
