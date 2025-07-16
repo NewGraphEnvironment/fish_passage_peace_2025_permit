@@ -35,10 +35,7 @@ Date Revised: `r format(Sys.Date(), "%Y-%m-%d")`
 :::
 
 
-Ministry of Water, Land and Resource Stewardship  
-and  
-Fisheries and Oceans Canada
-
+Ministry of Environment
 
 
 <br>
@@ -89,21 +86,21 @@ font_set <- 8
 
 **Re: Scientific Fish Collection Permit Application**
 
-Please note that permitting to Fisheries and Oceans Canada is requested for inventory purposes only.  PIT tagging is NOT proposed for salmon species. PIT tagging is proposed to the Provincial Ministry of Water, Land and Resource Stewardship (WLRS) for provincial jurisdiction species only to monitor fish movement and growth over multiple years.  
+<!-- Please note that permitting to Fisheries and Oceans Canada is requested for inventory purposes only.  PIT tagging is NOT proposed for salmon species. PIT tagging is proposed to the Provincial Ministry of Water, Land and Resource Stewardship (WLRS) for provincial jurisdiction species only to monitor fish movement and growth over multiple years.   -->
 
 
 ```{r pdf-inputs, eval = FALSE}
  # Our intention providing all information relevant for the study within the attached memo is to facilitate an understanding by all parties of what is happening and hopefully to provide the information necessary for permitting by both agencies. In the past - the memo provided has been attached as an appendix to the DFO permit issued.
 ```
 
-<br>
+<!-- <br> -->
 
-This permit application can also be viewed online [at this link](`r params$repo_url`). A summary of sites to be potentially assessed (including historic fish presence information available in FISS) is included as Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3). Details of fish species known within each watershed is presented in Table \@ref(tab:tab-fish) and an overview map displaying potential sample locations is included as Figure 1. A kml file of the sites is included as an attachment to the application and can also be downloaded [from here at this link](`r knitr::asis_output(link_kml)`).  There is an extensive amount of information contained in the kml file (accessed by clicking on sites) including brief summaries of background reporting data (when available).
+This permit application can also be viewed online [at this link](`r params$repo_url`). A summary of sites to be potentially assessed (including historic fish presence information available in FISS) is included in Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3). Details of fish species known within each watershed is presented in Table \@ref(tab:tab-fish), and an overview map displaying potential sample locations is included in Figure \@ref(fig:map). A kml file of the sites is included as an attachment to the application and can also be downloaded [at this link](`r knitr::asis_output(link_kml)`).  There is an extensive amount of information contained in the kml file (accessed by clicking on sites) including brief summaries of background reporting data (when available).
 
 <br>
 
 ## Brief description of project/activities {-}
-This work is a multi-year collaboration of many groups and an initiative of the Society for Ecosystem Restoration Northern BC. Funding for the project is through the Fish and Wildlife Compensation Program and the Provincial Fish Passage Technical Working Group.  Al Irvine, R.P.Bio from New Graph Environment Ltd. is leading the fieldwork with field and office collaboration with teams from McLeod Lake Indian Band. Past reports are below:
+This work is a multi-year collaboration of many groups and an initiative of the Society for Ecosystem Restoration Northern BC. Funding for the project is through the Fish and Wildlife Compensation Program and the Provincial Fish Passage Technical Working Group.  Fieldwork is being led by Al Irvine, R.P.Bio., of New Graph Environment Ltd., in collaboration with field and office teams from McLeod Lake Indian Band. Previous reports are provided below:
 
 - https://newgraphenvironment.github.io/Parsnip_Fish_Passage/
 - https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/
@@ -111,6 +108,8 @@ This work is a multi-year collaboration of many groups and an initiative of the 
 - https://newgraphenvironment.github.io/fish_passage_peace_2023_reporting/
 - https://newgraphenvironment.github.io/fish_passage_peace_2024_reporting/
 
+<br>
+<br>
 <br>
 
 ## Rationale for sampling {-}
@@ -486,8 +485,13 @@ table_sites |>
   # filter(id %in% sites_tagging) |> 
   sf::st_drop_geometry() |> 
   dplyr::arrange(id) |> 
-  dplyr::select(id, 
-         stream_name, wsc_code, utm_zone, utm_easting, utm_northing, watershed_group_code) |> 
+  dplyr::select(`Site ID` = id,
+                `Stream Name` = stream_name, 
+                `Watershed Code` = wsc_code, 
+                `UTM Zone` = utm_zone, 
+                `UTM Easting` = utm_easting, 
+                `UTM Northing` = utm_northing, 
+                `Watershed Group Code` = watershed_group_code) |> 
   fpr::fpr_kable(caption_text = 'Potential sampling locations.', scroll = FALSE)
 
   # fpr::fpr_kable(caption_text = 'Potential sample locations.', 
@@ -516,10 +520,10 @@ table_sites |>
   sf::st_drop_geometry() |> 
   dplyr::arrange(id) |> 
   dplyr::mutate(fish_tags = 150) |> 
-  dplyr::select(id, 
-         stream_name, 
-         sp_upstr = observedspp_upstr,
-         fish_tags) |> 
+  dplyr::select(`Site ID` = id,
+                `Stream Name` = stream_name,
+                `Species Upstream` = observedspp_upstr,
+                `# Fish Tags` = fish_tags) |> 
   # filter(id %in% sites_tagging) |> 
   fpr::fpr_kable(caption_text = 'Potential sample site details', scroll = FALSE)
   # fpr::fpr_kable(caption_text = 'Potential sample locations.', 
