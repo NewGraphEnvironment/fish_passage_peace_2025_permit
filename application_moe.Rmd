@@ -9,7 +9,7 @@ links-to-footnotes: false
 paged-footnotes: false
 params:
   repo_url: 'https://github.com/lucy-schick/fish_passage_peace_2025_permit'
-  report_url: 'https:/lucy-schick.github.io/fish_passage_peace_2025_permit/'
+  report_url: 'https://lucy-schick.github.io/fish_passage_peace_2025_permit/'
   gis_project_name: "sern_peace_fwcp_2023"
   update_packages: FALSE
   
@@ -41,8 +41,8 @@ Ministry of Environment
 <br>
 
 ```{r setup, include = TRUE, echo =FALSE, message=FALSE, warning=FALSE}
-gitbook_on <- TRUE
-# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+# gitbook_on <- TRUE
+gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, dpi=60, out.width = "100%")
@@ -95,7 +95,7 @@ font_set <- 8
 
 <!-- <br> -->
 
-This permit application can also be viewed online [at this link](`r params$repo_url`). A summary of sites to be potentially assessed (including historic fish presence information available in FISS) is included in Tables \@ref(tab:tab-sites1) - \@ref(tab:tab-sites3). Details of fish species known within each watershed is presented in Table \@ref(tab:tab-fish), and an overview map displaying potential sample locations is included in Figure \@ref(fig:map). A kml file of the sites is included as an attachment to the application and can also be downloaded [at this link](`r knitr::asis_output(link_kml)`).  There is an extensive amount of information contained in the kml file (accessed by clicking on sites) including brief summaries of background reporting data (when available).
+`r if (gitbook_on == FALSE) knitr::asis_output(paste0("This permit application can also be viewed online [at this link](", params$report_url, ")."))` A summary of sites proposed for assessment, including historic fish presence records from FISS, is provided in Tables \@ref(tab:tab-sites1) to \@ref(tab:tab-sites3). Fish species known to occur within each watershed are summarized in Table \@ref(tab:tab-fish). An overview map showing potential sample locations is presented in Figure \@ref(fig:map). A KML file of all sites is attached to the application and can also be downloaded [at this link](`r knitr::asis_output(link_kml)`). The KML includes detailed site-specific information accessible by clicking on each location, with brief summaries of background reports where available.
 
 <br>
 
