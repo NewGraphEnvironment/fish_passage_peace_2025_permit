@@ -12,6 +12,9 @@ params:
   report_url: 'https://lucy-schick.github.io/fish_passage_peace_2025_permit/'
   gis_project_name: "sern_peace_fwcp_2023"
   update_packages: FALSE
+bibliography: "`r rbbt::bbt_write_bib('references.bib', overwrite = TRUE)`"
+biblio-style: apalike
+link-citations: no
   
 
 # uncomment this line to produce HTML and PDF in RStudio:
@@ -41,8 +44,8 @@ Ministry of Environment
 <br>
 
 ```{r setup, include = TRUE, echo =FALSE, message=FALSE, warning=FALSE}
-gitbook_on <- TRUE
-# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+# gitbook_on <- TRUE
+gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, dpi=60, out.width = "100%")
@@ -67,8 +70,6 @@ target_species <- c("rainbow trout", "bull trout", "burbot")
 # This varies depending on the date the file was created
 gis_planning_file <- "planning_20250703.gpkg"
 
-# Build the link to the kml file
-link_kml <- fs::path(params$repo_url, '/blob/main/docs/', paste0("sites_", project_region, "_", permit_year, "_", format(Sys.Date(), '%Y%m%d'), "_kml.zip"))
 
 ```
 
@@ -91,11 +92,12 @@ font_set <- 8
 
 ```{r pdf-inputs, eval = FALSE}
  # Our intention providing all information relevant for the study within the attached memo is to facilitate an understanding by all parties of what is happening and hopefully to provide the information necessary for permitting by both agencies. In the past - the memo provided has been attached as an appendix to the DFO permit issued.
+
 ```
 
 <!-- <br> -->
 
-`r if (gitbook_on == FALSE) knitr::asis_output(paste0("This permit application can also be viewed online [at this link](", params$report_url, ")."))` A summary of sites proposed for assessment, including historic fish presence records from FISS, is provided in Tables \@ref(tab:tab-sites1) to \@ref(tab:tab-sites3). Fish species known to occur within each watershed are summarized in Table \@ref(tab:tab-fish). An overview map showing potential sample locations is presented in Figure \@ref(fig:map). A KML file of all sites is attached to the application and can also be downloaded [at this link](`r knitr::asis_output(link_kml)`). The KML includes detailed site-specific information accessible by clicking on each location, with brief summaries of background reports where available.
+`r if (gitbook_on == FALSE) knitr::asis_output(paste0("This permit application can also be viewed online [at this link](", params$report_url, ")."))` A summary of sites proposed for assessment, including historic fish presence records from FISS, is provided in Tables \@ref(tab:tab-sites1) to \@ref(tab:tab-sites3). Fish species known to occur within each watershed are summarized in Table \@ref(tab:tab-fish). An overview map showing potential sample locations is presented in Figure \@ref(fig:map). A KML and GPX file of all sites is attached to the application and can also be downloaded [at this link](`r paste0(params$repo_url,"/tree/main/mapping")`). The KML includes detailed site-specific information accessible by clicking on each location, with brief summaries of background reports where available.
 
 <br>
 
@@ -121,7 +123,7 @@ Rationale for sampling is to inform fish presence/absence, species composition/d
 ## Methodologies {-}
 
 
-Sampling methodologies will be dependent on the site, fish species suspected, type of habitat encountered, risks to aquatic organisms potentially present (Table \@ref(tab:tab-mitigation)) and ongoing communications.  Sampling methods may include minnowtrapping, electrofishing, and dipnetting upstream and downstream of current and past barrier culvert locations. 
+Sampling methodologies will be dependent on the site, fish species suspected, type of habitat encountered, risks to aquatic organisms potentially present (Table \@ref(tab:tab-mitigation)) and ongoing communications.  Sampling methods may include minnowtrapping, electrofishing, and dip netting upstream and downstream of current and past barrier culvert locations. 
 
 <br>
 
@@ -132,7 +134,7 @@ Sampling is proposed at streams included in Tables \@ref(tab:tab-sites1) - \@ref
 ### PIT Tagging {-}
 
 As part of this permit application we are proposing tagging for provincial jurisdiction species only.  PIT tagging is not 
-proposed for salmon species. Our study plan is (when time allows and PIT tagging is expected to increase our state of knowledge about the subject system) to electrofish small sites both upstream and downstream of priority culvert "barrier" sites and insert biomark APT12 PIT tags into the body cavity of select fish captured over 60mm in fork length.  Site location (UTM), fish length and weight will also be collected.  In addition to providing information on abundance upstream and downstream of potential culvert restoration sites, the study will also provide information for monitoring programs to document fish movement, growth and survival at sites over multi-year time frames. Main objectives are to:
+proposed for salmon species. When time allows and tagging is expected to improve knowledge of a system, our study plan is to electrofish small sites both upstream and downstream of priority culvert "barrier" sites and implant [Biomark APT12 PIT tags](https://www.youtube.com/watch?v=9CKZ9yaS5o8) in the abdominal cavity of select fish over 60mm in fork length. To anesthetize fish prior to PIT tagging, we use a clove oil solution at 0.1mL/L (1:10,000), which provides effective sedation with minimal residual effects [@fernandes_etal2017efficacyclove]. The solution is prepared by dissolving clove oil in ethyl alcohol at a 1:9 ratio before mixing into water [@fernandes_etal2017efficacyclove]. Site location (UTM), fish length and weight will also be collected. In addition to providing information on abundance upstream and downstream of potential culvert restoration sites, the study will also provide information for monitoring programs to document fish movement, growth and survival at sites over multi-year time frames. Main objectives are to:
 
   1. Determine if fish are moving into restored areas 
   2. Determine if before any remediation is conducted - fish are moving through sites where stream crossing structures (culverts) likely cause connectivity issues  
@@ -331,6 +333,11 @@ table_sites <- dplyr::left_join(
   fpr::fpr_sp_assign_latlong(col_lon = "long") 
 ```
 
+```{r burn-csv, eval = T}
+table_sites |> 
+  readr::write_csv(paste0("data/sites_", project_region, "_", permit_year, ".csv"))
+
+```
 
 ```{r print-wsc-console, eval=FALSE}
 
@@ -376,9 +383,20 @@ cat(formatted_output)
 ```{r gpx}
 
 dir.create('mapping')
-path_gps <- paste0("mapping/sites_", project_region,"_", permit_year, '_', format(Sys.Date(), "%Y%m%d"), ".gpx")
 
-#make a gpx file for loading into the gps'
+# Build the gpx file name with today's date
+today_date <- format(Sys.Date(), "%Y%m%d")
+prefix <- paste0("sites_", project_region, "_", permit_year, "_")
+path_gps <- paste0(prefix, today_date, ".gpx")
+
+# Delete old gpx files that are not today's file
+gpx_files <- fs::dir_ls("mapping", regexp = paste0("^mapping/", prefix, ".*\\.gpx$"))
+
+files_to_delete <- gpx_files[!fs::path_file(gpx_files) %in% path_gps]
+fs::file_delete(files_to_delete)
+
+
+# make a gpx file for loading into the gps
 table_sites |> 
   dplyr::mutate(desc = paste0("bt_rearing - ", bt_rearing_km, "km. ", my_priority_comments),
          # make a name that tells a story so we see it on the gps
@@ -389,7 +407,7 @@ table_sites |>
   dplyr::rename(geometry = geom) |> 
   dplyr::select(name, desc, geometry) |> 
   sf::st_transform(crs = 4326) |> 
-  sf::write_sf(dsn = path_gps, driver="GPX",
+  sf::write_sf(dsn = paste0("mapping/", path_gps), driver="GPX",
            dataset_options="GPX_USE_EXTENSIONS=yes", delete_dsn = TRUE)
 
 ```
@@ -397,15 +415,28 @@ table_sites |>
 ```{r kml}
 ##make a kml for adding to the georef pdf and sharing with stakeholders
 
+
+# Delete old kml files that are not today's file
+path_kml <- paste0(prefix, today_date, ".kml")
+kml_files <- fs::dir_ls("mapping", regexp = paste0("^mapping/", prefix, ".*\\.kml$"))
+files_to_delete <- kml_files[!fs::path_file(kml_files) %in% path_kml]
+fs::file_delete(files_to_delete)
+
+# Write today's KML file
 table_sites |> 
   dplyr::mutate(name = paste0(id, " - ", my_priority)) |> 
-    # dplyr::mutate(name = paste0(id, " - ", my_priority, " - MoTi_ID = ", moti_chris_culvert_id)) |> 
-  sf::st_write(dsn = paste0("mapping/sites_", project_region,"_", permit_year, '_', format(Sys.Date(), "%Y%m%d"), ".kml"), delete_dsn = TRUE, quiet = TRUE)
+  sf::st_write(
+    dsn = paste0("mapping/", path_kml),
+    delete_dsn = TRUE,
+    quiet = TRUE
+  )
 
-
-##now we will zip up the kml files in the data folder and rename with kmz
-files_to_zip <- paste0("mapping/", list.files(path = "mapping/", pattern = "\\.kml$"))  ##this will zip all kmls in file so watch out
-zip::zipr(paste0("docs/sites_", project_region, "_", permit_year, '_', format(Sys.Date(), "%Y%m%d"), '_kml.zip'), files = files_to_zip)  ##it does not work to zip to kmz!!
+# # Zip up all remaining KMLs (should just be today's file)
+# files_to_zip <- paste0("mapping/", list.files(path = "mapping/", pattern = "\\.kml$"))
+# zip::zipr(
+#   zipfile = paste0("docs/", prefix, today_date, "_kml.zip"),
+#   files = files_to_zip
+# )
 
 
 ```
@@ -550,5 +581,6 @@ tab_fish |>
 
 ```
 
+<br>
 
-
+# References {.unnumbered}
