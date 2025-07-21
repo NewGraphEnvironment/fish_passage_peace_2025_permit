@@ -4,7 +4,7 @@ staticimports::import()
 
 {
   rmarkdown::render(input = 'application_moe.Rmd', output_file = 'docs/index.html')
-  pagedown::chrome_print(input = 'application_moe.Rmd', output = 'docs/application_moe_dfo.pdf')
+  pagedown::chrome_print(input = 'application_moe.Rmd', output = 'docs/application_moe.pdf')
 
   # we want to seperately attach a map and a list of sites for DFO
   #
