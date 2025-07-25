@@ -8,8 +8,8 @@ output:
 links-to-footnotes: false
 paged-footnotes: false
 params:
-  repo_url: 'https://github.com/lucy-schick/fish_passage_peace_2025_permit'
-  report_url: 'https://lucy-schick.github.io/fish_passage_peace_2025_permit/'
+  repo_url: 'https://github.com/NewGraphEnvironment/fish_passage_peace_2025_permit'
+  report_url: 'https://NewGraphEnvironment.github.io/fish_passage_peace_2025_permit/'
   gis_project_name: "sern_peace_fwcp_2023"
   update_packages: FALSE
 bibliography: "`r rbbt::bbt_write_bib('references.bib', overwrite = TRUE)`"
@@ -61,7 +61,7 @@ project_region <- stringr::str_extract(params$repo_url, "(?<=fish_passage_)[^_]+
 permit_year <- stringr::str_match(params$repo_url, "fish_passage_[^_]+_([0-9]{4})")[,2]
 
 # Build the link to the kml file
-link_kml <- fs::path(params$repo_url, '/blob/main/docs/', paste0("sites_", project_region, "_", permit_year, "_", format(Sys.Date(), '%Y%m%d'), "_kml.zip"))
+link_kml <- fs::path(params$repo_url, '/raw/main/docs/', paste0("sites_", project_region, "_", permit_year, "_", format(Sys.Date(), '%Y%m%d'), "_kml.zip"))
 
 # Specific the target species likely to be tagged since we include so many. Varies from region to region and can be determined from
 # past data (if this is a multi-year project)
@@ -97,12 +97,12 @@ font_set <- 8
 
 <!-- <br> -->
 
-`r if (gitbook_on == FALSE) knitr::asis_output(paste0("This permit application can also be viewed online [at this link](", params$report_url, ")."))` A summary of sites proposed for assessment, including historic fish presence records from FISS, is provided in Tables \@ref(tab:tab-sites1) to \@ref(tab:tab-sites3). Fish species known to occur within each watershed are summarized in Table \@ref(tab:tab-fish). An overview map showing potential sample locations is presented in Figure \@ref(fig:map). A KML and GPX file of all sites is attached to the application and can also be downloaded [at this link](`r paste0(params$repo_url,"/tree/main/mapping")`). The KML includes detailed site-specific information accessible by clicking on each location, with brief summaries of background reports where available.
+`r if (gitbook_on == FALSE) knitr::asis_output(paste0("This permit application can also be viewed online [at this link](", params$report_url, ")."))` A summary of sites proposed for assessment, including historic fish presence records from FISS, is provided in Tables \@ref(tab:tab-sites1) to \@ref(tab:tab-sites3). Fish species known to occur within each watershed are summarized in Table \@ref(tab:tab-fish). An overview map showing potential sample locations is presented in Figure \@ref(fig:map). A KML and GPX file of all sites is attached to the application and can also be downloaded [at this link](`r link_kml`) (or [here](`r paste0(params$repo_url,"/tree/main/mapping")`) if this is not the latest version of the memo). The KML includes detailed site-specific information accessible by clicking on each location, with brief summaries of background reports where available.
 
 <br>
 
 ## Brief description of project/activities {-}
-This work is a multi-year collaboration of many groups and an initiative of the Society for Ecosystem Restoration Northern BC. Funding for the project is through the Fish and Wildlife Compensation Program and the Provincial Fish Passage Technical Working Group.  Fieldwork is being led by Al Irvine, R.P.Bio., of New Graph Environment Ltd., in collaboration with field and office teams from McLeod Lake Indian Band. Previous reports are provided below:
+This work is a multi-year collaboration of many groups and an initiative of the Society for Ecosystem Restoration Northern BC. Funding for the project is through the Fish and Wildlife Compensation Program, SERNbc and the Ministry of Transportation and Infrastructure.  Fieldwork is being led by Al Irvine, R.P.Bio., of New Graph Environment Ltd., in collaboration with field and office teams from McLeod Lake Indian Band. Previous reports are linked below:
 
 - https://newgraphenvironment.github.io/Parsnip_Fish_Passage/
 - https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/
@@ -110,9 +110,7 @@ This work is a multi-year collaboration of many groups and an initiative of the 
 - https://newgraphenvironment.github.io/fish_passage_peace_2023_reporting/
 - https://newgraphenvironment.github.io/fish_passage_peace_2024_reporting/
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 ## Rationale for sampling {-}
 
@@ -133,8 +131,7 @@ Sampling is proposed at streams included in Tables \@ref(tab:tab-sites1) - \@ref
 
 ### PIT Tagging {-}
 
-As part of this permit application we are proposing tagging for provincial jurisdiction species only.  PIT tagging is not 
-proposed for salmon species. When time allows and tagging is expected to improve knowledge of a system, our study plan is to electrofish small sites both upstream and downstream of priority culvert "barrier" sites and implant [Biomark APT12 PIT tags](https://www.youtube.com/watch?v=9CKZ9yaS5o8) in the abdominal cavity of select fish over 60mm in fork length. To anesthetize fish prior to PIT tagging, we use a clove oil solution at 0.1mL/L (1:10,000), which provides effective sedation with minimal residual effects [@fernandes_etal2017efficacyclove]. The solution is prepared by dissolving clove oil in ethyl alcohol at a 1:9 ratio before mixing into water [@fernandes_etal2017efficacyclove]. Site location (UTM), fish length and weight will also be collected. In addition to providing information on abundance upstream and downstream of potential culvert restoration sites, the study will also provide information for monitoring programs to document fish movement, growth and survival at sites over multi-year time frames. Main objectives are to:
+As part of this permit application we are proposing PIT tagging. When time allows and tagging is expected to improve knowledge of a system, our study plan is to electrofish small sites both upstream and downstream of priority culvert "barrier" sites and implant [Biomark APT12 PIT tags](https://www.youtube.com/watch?v=9CKZ9yaS5o8) in the abdominal cavity of select fish over 60mm in fork length. To anesthetize fish prior to PIT tagging, we use a clove oil solution at 0.1mL/L (1:10,000), which provides effective sedation with minimal residual effects [@fernandes_etal2017efficacyclove]. The solution is prepared by dissolving clove oil in ethyl alcohol at a 1:9 ratio before mixing into water [@fernandes_etal2017efficacyclove]. Site location (UTM), fish length and weight will also be collected. In addition to providing information on abundance upstream and downstream of potential culvert restoration sites, the study will also provide information for monitoring programs to document fish movement, growth and survival at sites over multi-year time frames. Main objectives are to:
 
   1. Determine if fish are moving into restored areas 
   2. Determine if before any remediation is conducted - fish are moving through sites where stream crossing structures (culverts) likely cause connectivity issues  
@@ -154,8 +151,8 @@ impacts_mitigation <- tribble(
   ~Impact, ~Mitigation,
   "High Voltage Injuries", "Use the minimum effective voltage.  Avoid contacting fish with the anode.  Avoid electrofishing directly adjacent to metal culverts.",
   "Disruption of Spawning", "Avoid electrofishing during highest risk periods in likely spawning habitat.",
-  "Physical Stress on Fish", "Quick/gentle handling and release of captured fish.",
-  "Injury from PIT Tagging Surgeries", "Shallow insertion of tags and use of fresh sterile syringes every approximately 10 surgeries",
+  "Physical Stress on Fish", "Quick/gentle handling and release of captured fish. Use of clove oil to anesthetize fish.",
+  "Injury from PIT Tagging Surgeries", "Shallow insertion of tags and use of fresh sterile syringes every approximately 10 surgeries.",
   "Mortality in traps due to predation and starvation", "Ensure all traps set are retrieved within 24 hours."
 )
 
@@ -173,7 +170,7 @@ Please do not hesitate to contact me if you need more information or have any qu
 
 
 
-<!-- ![signature](/Users/airvine/Library/CloudStorage/OneDrive-Personal/Admin/Al_Sig.jpg){width=50%} -->
+![signature](/Users/airvine/Projects/current/Admin/Al_Sig.jpg){width=50%}
 Al Irvine, R.P.Bio 
 
 ```{r pull-db}
@@ -191,13 +188,13 @@ site_review_ids <- c(
   ##missinka reference
   125180,
   ##trib to Kerry Lake where BCTS is deactivating.  Good flow
-  198692,
+  # 198692,
   ##trib to McLeod with large outlet, ok flow and decent looking habitat. On reserve and close to community
-  198668,
+  198668
   ##trib to McLeod Lake right at the store and walking distance from community.  
   ## good site for sampling to get people interested
-  #large outlet drop, ok flow and decent looking habitat. On reserve
-  198667
+  #no outlet drop, ok flow and decent looking habitat. On reserve
+  # 198667
   )
 
 
@@ -230,9 +227,10 @@ sites_planning_raw <- fpr::fpr_sp_gpkg_backup(
 
 # Grab only the sites with my_priority = mod or high
 sites_planning <- sites_planning_raw |> 
-  dplyr::filter(my_priority %in% c("mod", "high"))
-
-
+  dplyr::filter(
+    my_priority %in% c("mod", "high") &
+      watershed_group_code %in% c("NATR", "PARA")
+  )
 
 
 # join the review and planning sites together
@@ -292,41 +290,43 @@ wscodes <- fpr::fpr_db_query(
 
 # make a table with the watershed codes, stream name, fish species
 table_sites <- dplyr::left_join(
-
+  
   sites_all |> 
     dplyr::select(id = my_crossing_reference,
-         modelled_crossing_id,
-         bt_network_km,
-         bt_spawning_km,
-         bt_rearing_km,
-         utm_zone,
-         utm_easting,
-         utm_northing,
-         mapsheet = dbm_mof_50k_grid,
-         watershed_group_code,
-         pscis_assessment_comment,
-         gnis_stream_name, 
-         stream_name = pscis_stream_name, 
-         observedspp_upstr,
-         my_priority,
-         my_priority_comments),
-
+                  modelled_crossing_id,
+                  bt_network_km,
+                  bt_spawning_km,
+                  bt_rearing_km,
+                  utm_zone,
+                  utm_easting,
+                  utm_northing,
+                  mapsheet = dbm_mof_50k_grid,
+                  watershed_group_code,
+                  pscis_assessment_comment,
+                  gnis_stream_name, 
+                  stream_name = pscis_stream_name, 
+                  observedspp_upstr,
+                  my_priority,
+                  my_priority_comments),
+  
   wscodes |> 
     dplyr::select(modelled_crossing_id, wsc_code = watershed_code_50k_parsed),
-
+  
   by = 'modelled_crossing_id'
 ) |>  
   # add the 3 missing watershed codes for the crossings that didn't have `modelled_crossing_id`
-  dplyr::mutate(wsc_code = dplyr::case_when(id == 125000 ~ "236-738000-00000-00000-0000-0000-000-000-000-000-000-000",
-                                            id == 7819 ~ "230-870800-11500-24500-0000-0000-000-000-000-000-000-000",
-                                            id == 7827 ~ "230-870800-00000-00000-0000-0000-000-000-000-000-000-000",
-                                            T ~ wsc_code)) |> 
-
-   # do some clean up and wrangle
+  dplyr::mutate(wsc_code = dplyr::case_when(
+    id == 125000 ~ "236-738000-00000-00000-0000-0000-000-000-000-000-000-000",
+    id == 7819 ~ "230-870800-11500-24500-0000-0000-000-000-000-000-000-000",
+    id == 7827 ~ "230-870800-00000-00000-0000-0000-000-000-000-000-000-000",
+    T ~ wsc_code)
+  ) |> 
+  
+  # do some clean up and wrangle
   dplyr::mutate(dplyr::across(dplyr::starts_with('bt_'), ~round(., 1))) |> 
   dplyr::arrange(id) |>  
   dplyr::mutate(stream_name = dplyr::case_when(is.na(stream_name) ~ gnis_stream_name,
-                                                T ~ stream_name),
+                                               T ~ stream_name),
                 stream_name = stringr::str_to_title(stream_name)) |> 
   dplyr::select(-c("gnis_stream_name", "modelled_crossing_id")) |> 
   sf::st_transform(crs = 4326) |> 
@@ -364,7 +364,7 @@ formatted_output <- table_sites |>
     
     # Combine the header and the data
     headers <- paste(headers, collapse = "\t")
-    formatted_rows <- pmap_chr(., ~ paste(..., collapse = "\t"))
+    formatted_rows <- purrr::pmap_chr(., ~ paste(..., collapse = "\t"))
     
     paste(c(headers, formatted_rows), collapse = "\n")
   }
@@ -431,13 +431,23 @@ table_sites |>
     quiet = TRUE
   )
 
-# # Zip up all remaining KMLs (should just be today's file)
-# files_to_zip <- paste0("mapping/", list.files(path = "mapping/", pattern = "\\.kml$"))
-# zip::zipr(
-#   zipfile = paste0("docs/", prefix, today_date, "_kml.zip"),
-#   files = files_to_zip
-# )
+# Zip up all gpx and KMLs (should just be today's file)
+files_to_zip <- fs::dir_ls(
+  path = "mapping/", 
+  regexp = "\\.(kml|gpx)$", 
+  recurse = FALSE, 
+  type = "file"
+)
 
+# remove the old zip file
+fs::file_delete(
+  fs::dir_ls("docs/", glob = "*.zip")
+)
+
+zip::zipr(
+  zipfile = paste0("docs/", prefix, today_date, "_kml.zip"),
+  files = files_to_zip
+)
 
 ```
 
@@ -455,10 +465,10 @@ aoi_buffer <- 0.05
 ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
 
 #define the area of the base map by using a bounding box 
-mybasemap <- ggmap::get_map(location = c(left = table_sites |> pull(long) |> min()-aoi_buffer, 
-                                    bottom = table_sites |> pull(lat) |> min()-aoi_buffer,
-                                    right = table_sites |> pull(long) |> max()+aoi_buffer,
-                                    top = table_sites |> pull(lat) |> max()+aoi_buffer),
+mybasemap <- ggmap::get_map(location = c(left = table_sites |> dplyr::pull(long) |> min()-aoi_buffer, 
+                                    bottom = table_sites |> dplyr::pull(lat) |> min()-aoi_buffer,
+                                    right = table_sites |> dplyr::pull(long) |> max()+aoi_buffer,
+                                    top = table_sites |> dplyr::pull(lat) |> max()+aoi_buffer),
                      source = "google",
                      zoom = 7,
                     maptype = "roadmap")
@@ -466,8 +476,8 @@ mybasemap <- ggmap::get_map(location = c(left = table_sites |> pull(long) |> min
 
 
 #define the area of the base map by using the middle. 
-# mybasemap <- ggmap::get_map(location = c(lon = table_sites |> pull(long) |> mean(),
-#                                          lat = table_sites |> pull(lat) |> mean())
+# mybasemap <- ggmap::get_map(location = c(lon = table_sites |> dplyr::pull(long) |> mean(),
+#                                          lat = table_sites |> dplyr::pull(lat) |> mean())
 #                             source = "google",
 #                             zoom = "auto",
 #                             maptype = "hybrid")
@@ -574,7 +584,8 @@ table_sites |>
 
 
 ```{r tab-fish}
-tab_fish <- readr::read_csv('data/fiss_species_table.csv')
+tab_fish <- readr::read_csv('data/fiss_species_table.csv') |> 
+  dplyr::select(-`Peace Arm`, -`Upper Peace`)
 
 tab_fish |> 
   fpr::fpr_kable(caption_text = 'Fish species recorded in the Fisheries Information Summary System within the freshwater atlas watershed group areas where the potential sample sites are located.', scroll = FALSE, font_size = 8)
